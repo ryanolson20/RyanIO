@@ -1,0 +1,43 @@
+<!-- carousel -->
+<div class="carousel">
+  <ng-container *ngFor="let slide of slides; let i = index">
+    <div *ngIf="i === currentSlide" @slideAnimation>
+      <img
+        [src]="slide.src"
+        class="slide"
+      />
+      <div
+        class="slide-title" 
+        >
+        {{currentWord}}
+      </div>
+    </div>
+  </ng-container>
+  <div class="left-arrow-container">
+    <button class="control prev" (click)="onPreviousClick()">
+      <span class="arrow left"></span>
+    </button>
+  </div>  
+  <div class="right-arrow-container">
+    <button class="control next" (click)="onNextClick()">
+      <span class="arrow right"></span>
+    </button>
+  </div>
+  <div class="selectbutton-container">
+    <div *ngIf="0===currentSlide">
+      <img src="assets/SelectedCircle.svg">
+      <img src="assets/UnselectedCircle.svg" (click)="onNextClick()">
+      <img src="assets/UnselectedCircle.svg" (click)="onPreviousClick()">
+    </div>
+    <div *ngIf="1===currentSlide">
+      <img src="assets/UnselectedCircle.svg" (click)="onPreviousClick()">
+      <img src="assets/SelectedCircle.svg">
+      <img src="assets/UnselectedCircle.svg" (click)="onNextClick()">
+    </div>
+    <div *ngIf="2===currentSlide">
+      <img src="assets/UnselectedCircle.svg" (click)="onNextClick()">
+      <img src="assets/UnselectedCircle.svg" (click)="onPreviousClick()">
+      <img src="assets/SelectedCircle.svg">
+    </div>
+  </div>
+</div>

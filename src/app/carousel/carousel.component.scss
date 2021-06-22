@@ -1,0 +1,96 @@
+
+.carousel {
+  max-width: 100%;
+  margin-top: 80px;
+  position:relative;
+  text-align:center;
+}
+
+.slide {
+  // zoom effect on hover
+  width: 100%;
+  position:absolute;
+  left:0;
+}
+
+.slide-title{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display:block;
+}
+
+.selectbutton-container{
+  margin-top: 480px;
+  display:inline-block;
+}
+
+.selectbutton-container img{
+  margin-top: 0px;
+  width: 20px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+// =========================
+// Next and Prev buttons
+// =========================
+.control {
+  border: none;
+  background-color: transparent;
+  outline: 0; // remove blue outline border, but make sure they are still focussable for accessibility
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0.5em;
+  color: white;
+  font-weight: bold;
+  font-size: 3em;
+  user-select: none;
+  height: 100%;
+  opacity: 1;
+
+  &:hover, &:focus {
+    opacity: 1;
+  }
+
+  /* Position the buttons */
+  &.next {
+    right: 0;
+  }
+  &.prev {
+    left: 0;
+  }
+}
+
+/* style the arrows */
+.arrow {
+  display: block;
+  border-left: 0.1em solid slategray;
+  border-bottom: 0.1em solid slategray;
+  width: 0.5em;
+  height: 0.5em;
+
+  &.left {
+    transform: rotate(45deg);
+  }
+  &.right {
+    transform: rotate(225deg);
+  }
+  &:hover, &:focus {
+    border-left: 0.1em solid black;
+    border-bottom: 0.1em solid black;
+  }
+}
+
+.left-arrow-container{
+  position: absolute;
+  top:250px;
+  left:-50px;
+}
+
+.right-arrow-container{
+  position: absolute;
+  top:250px;
+  right:-50px;
+}

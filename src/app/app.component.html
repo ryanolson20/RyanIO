@@ -1,0 +1,260 @@
+<style>
+  :host {
+    font-family: Inter;
+    color: #333;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  @font-face {
+    font-family: Inter;
+    src: url(assets/Inter/Inter-Regular.ttf) format("truetype");
+  }
+
+  @font-face {
+    font-family: Inter-Bold;
+    src: url(assets/Inter/Inter-Bold.ttf) format("truetype");
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 8px 0;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .spacer {
+    flex: 1;
+  }
+
+  .element-container {
+    padding-top: 80px;
+  }
+
+  .menubar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    display: flex;
+    text-align: right;
+    background: linear-gradient(180deg, rgba(133, 133, 133, 0.5) 0%, rgba(133, 133, 133, 0.5) 100%), linear-gradient(180deg, #8ADABD 0%, #98B9E6 65.1%, #8071DC 100%);
+    color: white;
+    font-weight: 600;
+    overflow: hidden;
+    width:18%;
+  }
+
+  .menubar button {
+    text-align: right;
+    margin-bottom: 30px;
+    border-radius: 0%;
+    color: white;
+    font-family: Inter;
+    font-size: 14px;
+    border: 0px solid #375981;
+    padding-right: 40px;
+    width: 100%;
+    background-color: transparent;
+  }
+
+  .menubar button:focus {
+    outline: none;
+    font-family: Inter-Bold;
+  }
+
+  .content {
+    display: flex;
+    width:82%;
+    height: 100%;
+    float:right;
+    background-size: cover;
+    background-image: url(assets/HomeBackground.svg);
+    background-position: center;
+  }
+
+  .content-container {
+    text-align: center;
+    float: right;
+    margin-left:auto;
+    margin-right:auto;
+    width:100%;
+    position: relative;
+  }
+
+  .selectbutton-container{
+    margin-top: 720px;
+  }
+
+  .selectbutton-container img{
+    margin-top: 0px;
+    width: 20px;
+    padding: 10px;
+  }
+
+  .content hr{
+    background-color: #375981;
+    height: 3px;
+    width: 100%;
+    border: none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .content h2{
+    color:  #375981;
+    font-family: Inter-Bold;
+    font-size: 32;
+    display: block;
+  }
+
+  /* Responsive Styles */
+  @media screen and (min-width: 1441px){
+    .menubar{
+      width: 300px;
+    }
+    .content{
+      width: calc(100% - 300px);
+    }
+    .content-container{
+      width: 1000px;
+    }
+
+    .selectbutton-container img{
+      width: 20px;
+    }
+  }
+
+  @media screen and (min-width: 1025px)  and (max-width: 1440px) {
+    .content-container{
+      width: 720px;
+    }
+
+    .selectbutton-container img{
+      width: 20px;
+    }
+  }
+
+  @media screen and (min-width: 768px)  and (max-width: 1024px) {
+    .menubar{
+      width:100px;
+    }
+    .menubar button{
+      padding: 0;
+      text-align: center;
+      margin-left:20%;
+      margin-right: 20%;
+      width: 60%;
+      font-size: 12px;
+    }
+    .content{
+      width: calc(100% - 100px);
+    }
+    .content-container{
+      width: 600px;
+    }
+
+    .selectbutton-container img{
+      width: 20px;
+    }
+  }
+
+  @media screen and (min-width: 550px)  and (max-width: 767px) {
+    .menubar{
+      width:100px;
+    }
+    .menubar button{
+      padding: 0;
+      text-align: center;
+      margin-left:20%;
+      margin-right: 20%;
+      width: 60%;
+      font-size: 12px;
+    }
+    .content{
+      width: calc(100% - 100px);
+    }
+    .content-container{
+      width: 400px;
+    }
+
+    .selectbutton-container img{
+      width: 20px;
+    }
+  }
+
+  @media screen and (min-width: 416px)  and (max-width: 549px) {
+    .menubar{
+      width:100px;
+    }
+    .menubar button{
+      padding: 0;
+      text-align: center;
+      margin-left:20%;
+      margin-right: 20%;
+      width: 60%;
+      font-size: 12px;
+    }
+    .content{
+      width: calc(100% - 100px);
+    }
+    .content-container{
+      width: 300px;
+    }
+    .selectbutton-container img{
+      width: 20px;
+    }
+  }
+
+  @media screen and (max-width: 415px) {
+    .menubar{
+      width:100px;
+    }
+    .menubar button{
+      padding: 0;
+      text-align: center;
+      margin-left:20%;
+      margin-right: 20%;
+      width: 60%;
+      font-size: 12px;
+    }
+    .content{
+      width: calc(100% - 100px);
+    }
+    .content-container img{
+      width: 300px;
+    }
+    .selectbutton-container img{
+      width: 20px;
+    }
+  }
+</style>
+
+<!-- Toolbar -->
+<div class="menubar">
+    <div class="element-container">
+      <button>ABOUT ME</button>
+      <button>UI/UX</button>
+      <button>VISUAL DESIGN</button>
+      <button>DATA</button>
+      <button>RESUME</button>
+      <button style="font-family: Inter-Bold; font-size:24px; margin-top:120px">R / O</button>
+    </div>
+</div>
+
+<div class="content">
+  <div class="content-container">
+    <carousel [slides]="slides"></carousel>
+  </div>
+</div>
+
+
